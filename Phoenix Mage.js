@@ -16,15 +16,16 @@ load_code("PhoenixTargeter")
 
 var p = 0; // switch case number for travel
 var leader = get_player(character.party); // leader 
+var partyLeader = player1;
 var autoTime = new Date(); // time since last group teleport
 var till_level = 0; //Kills till level = 0, XP till level = 1
 var lastburst; // time since last energize
-var player1  = "Wired"; // Party Leader
-var player2  = "BuffNStuff"; // Party Member 2
-var player3  = "MerkChant"; // Party Member 3
-var ranger   = "Wired"; // Your Ranger
-var priest   = "BuffNStuff"; // Your Priest
-var mage     = "WolfQueen"; // Your Mage
+var player1 = "Wired"; // Party Leader
+var player2 = "BuffNStuff"; // Party Member 2
+var player3 = "MerkChant"; // Party Member 3
+var ranger = "Wired"; // Your Ranger
+var priest = "BuffNStuff"; // Your Priest
+var mage = "WolfQueen"; // Your Mage
 var merchant = "MerkChant"; // Your Merchant
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -157,7 +158,6 @@ setInterval(function () {
                 p++;
                 //	j++;
                 game_log("P = 1");
-                autoBots();
                 break;
             case 2:
                 // code block
@@ -242,7 +242,7 @@ setInterval(function () {
         give_goods();
     }
 
-    if (character.party != leader) {
+    if (character.party != partyLeader) {
         game_log(character.party);
         leave_party();
     }
