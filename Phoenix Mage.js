@@ -19,12 +19,12 @@ var leader = get_player(character.party); // leader
 var autoTime = new Date(); // time since last group teleport
 var till_level = 0; //Kills till level = 0, XP till level = 1
 var lastburst; // time since last energize
-var player1 = "Wired"; // Party Leader
-var player2 = "BuffNStuff"; // Party Member 2
-var player3 = "MerkChant"; // Party Member 3
-var ranger = "Wired"; // Your Ranger
-var priest = "BuffNStuff"; // Your Priest
-var mage = "WolfQueen"; // Your Mage
+var player1  = "Wired"; // Party Leader
+var player2  = "BuffNStuff"; // Party Member 2
+var player3  = "MerkChant"; // Party Member 3
+var ranger   = "Wired"; // Your Ranger
+var priest   = "BuffNStuff"; // Your Priest
+var mage     = "WolfQueen"; // Your Mage
 var merchant = "MerkChant"; // Your Merchant
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -230,7 +230,7 @@ setInterval(function () {
     var give_merchant = true;
 
     function give_goods() {
-        var receiver = "MerkChant";
+        var receiver = merchant;
         var gold = "100000";
         for (var i = 5; i < (43 - character.esize); i++) {
             send_item(receiver, i, 10000);
@@ -238,11 +238,11 @@ setInterval(function () {
         send_gold(receiver, gold);
     }
 
-    if (give_merchant && get_player("MerkChant")) {
+    if (give_merchant && get_player(merchant)) {
         give_goods();
     }
 
-    if (character.party != "Wired") {
+    if (character.party != leader) {
         game_log(character.party);
         leave_party();
     }
