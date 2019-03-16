@@ -1,9 +1,8 @@
-// Written by QRICH 3/14/19
-//PhoenixTargeter goes with this script and is an editied version of one written by
-// Spadar, all credit to him for this. Thank you!
-
-// This Script will go to all of the Phoenix and Dracul Spawns every 10 seconds and teleport your team there.
-
+/*Written by QRICH 3/14/19
+Used with PhoenixTargeter in my Github. This is a modified version of SPADARS
+https://github.com/Spadar/AdventureLand
+This Script will go to all of the Phoenix and Dracul Spawns every 10 seconds and teleport your team there.
+*/
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////LOAD CODES////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////
