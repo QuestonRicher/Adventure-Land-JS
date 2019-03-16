@@ -221,14 +221,27 @@ setInterval(function () {
                 break;
 
             case 8:
-                use_skill("blink", [0, 445]);
+                use_skill("blink", [-250, -745]);
                 p++;
                 game_log("P = 8");
                 break;
 
             case 9:
-                use_skill("blink", [-50, -280])
-                smart_move("crab");
+                use_skill("blink", [-50, -450]);
+                smart_move("jr")
+                p++;
+                game_log("P = 9");
+                break;
+
+            case 10:
+                smart_move("crab")
+                use_skill("blink", [0, 0]);
+                p++;
+                game_log("P = 9");
+                break;
+
+            case 11:
+                smart_move("crab")
                 p = 0;
                 game_log("P = 9");
                 break;
@@ -237,7 +250,9 @@ setInterval(function () {
                 p = 0;
                 break;
         }
-    }
-    handle_death()
+     }
+  
+
+handle_death()
 }, 8000)
 //END INTERVAL FUNCTION
